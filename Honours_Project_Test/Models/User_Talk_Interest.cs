@@ -19,7 +19,7 @@ namespace Honours_Project_Test.Models
         public string Talk_ID { get; set; }
 
         [ForeignKey("User_ID")]
-        public virtual Honours_Project_Test.Models.User.User User { get; set; }
+        public virtual Honours_Project_Test.Models.User User { get; set; }
 
         [ForeignKey("Talk_ID")]
         public virtual Talk Talk { get; set; }

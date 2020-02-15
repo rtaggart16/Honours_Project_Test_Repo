@@ -40,6 +40,6 @@ namespace Honours_Project_Test.Models
         public virtual Talk Talk { get; set; }
 
         [ForeignKey("User_ID")]
-        public virtual Honours_Project_Test.Models.DBModels.User.User User { get; set; }
+        public virtual Honours_Project_Test.Models.User User { get; set; }
     }
 }
