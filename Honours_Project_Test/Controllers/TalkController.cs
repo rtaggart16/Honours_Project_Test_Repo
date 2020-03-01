@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Honours_Project_Test.Models.ViewModels.Talk;
+using Honours_Project_Test.Services;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -17,6 +18,12 @@ namespace Honours_Project_Test.Controllers
         public TalkController(ITalkService talkService)
         {
             _talkService = talkService;
+        }
+
+        [HttpGet]
+        public List<Basic_Talk_Info> Talks()
+        {
+            return _talkService.Get_All_Talks();
         }
 
         [HttpGet]
