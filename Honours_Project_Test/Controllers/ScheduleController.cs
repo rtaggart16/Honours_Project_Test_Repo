@@ -22,6 +22,12 @@ namespace Honours_Project_Test.Controllers
         }
 
         [HttpGet]
+        public List<SessionViewModel> Schedule()
+        {
+            return Get_All_Schedules();
+        }
+
+        [HttpGet]
         [Route("get/all")]
         public List<SessionViewModel> Get_All_Schedules()
         {
